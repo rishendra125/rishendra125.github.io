@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rishendra Singh — AI Projects</title>
+<style>
+  :root {
+    --text: #111;
+    --muted: #555;
+    --border: #ddd;
+    --bg: #fff;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+  }
+  .wrap {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 48px 20px 80px;
+  }
+  header {
+    margin-bottom: 40px;
+  }
+  h1 {
+    font-size: 1.5rem;
+    margin: 0 0 8px;
+  }
+  .tagline {
+    color: var(--muted);
+    font-size: 1rem;
+    margin: 0 0 16px;
+  }
+  .links a {
+    color: var(--text);
+    text-decoration: underline;
+    font-size: 0.95rem;
+  }
+  h2.section-label {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--muted);
+    margin: 0 0 20px;
+    font-weight: 600;
+  }
+  .project {
+    border-top: 1px solid var(--border);
+    padding: 24px 0;
+  }
+  .project:last-child {
+    border-bottom: 1px solid var(--border);
+  }
+  .project h3 {
+    margin: 0 0 8px;
+    font-size: 1.1rem;
+  }
+  .project p.desc {
+    margin: 0 0 12px;
+    color: var(--text);
+  }
+  .project ul {
+    margin: 0 0 12px;
+    padding-left: 18px;
+    color: var(--muted);
+    font-size: 0.92rem;
+  }
+  .project ul li {
+    margin-bottom: 4px;
+  }
+  .project a.repo-link {
+    display: inline-block;
+    color: var(--text);
+    text-decoration: underline;
+    font-size: 0.95rem;
+  }
+  footer {
+    margin-top: 48px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 0.9rem;
+  }
+  footer a {
+    color: var(--text);
+  }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <h1>Rishendra Singh</h1>
+      <p class="tagline">Emerging AI Orchestrator — 7 years in program and delivery management, now applying that same discipline to building AI products.</p>
+      <div class="links">
+        <a href="https://www.linkedin.com/in/rishendra-vikram-singh-a7355718a/" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </header>
+
+    <main>
+      <h2 class="section-label">Projects</h2>
+
+      <div class="project">
+        <h3>QueryGPT MVP</h3>
+        <p class="desc">Lets you ask a database a plain-English question and get the right answer back — no SQL knowledge needed. Inspired by how Uber built a similar internal tool.</p>
+        <ul>
+          <li>Caught 4 real bugs through live, unscripted testing</li>
+          <li>Includes a simple web interface with a demo mode</li>
+        </ul>
+        <a class="repo-link" href="https://github.com/rishendra125/querygpt_mvp" target="_blank" rel="noopener">View on GitHub →</a>
+      </div>
+
+      <div class="project">
+        <h3>Spec Audit Tool</h3>
+        <p class="desc">Reviews a product spec before it gets built and flags what's missing — edge cases nobody thought of, requirements that can't be tested, numbers with no source behind them.</p>
+        <ul>
+          <li>Runs 18 separate checks against a spec</li>
+          <li>Refined across 7 rounds of real testing, fixing 8 bugs along the way</li>
+        </ul>
+        <a class="repo-link" href="https://github.com/rishendra125/spec_audit_tool" target="_blank" rel="noopener">View on GitHub →</a>
+      </div>
+
+      <div class="project">
+        <h3>MeetingMeet</h3>
+        <p class="desc">Takes a meeting transcript, figures out the action items, decides what's safe to share vs. what should stay private, and drafts emails using only the safe parts.</p>
+        <ul>
+          <li>Tested against 12 real meeting transcripts with hand-checked answers</li>
+          <li>Includes a working web app with export to CSV and PDF</li>
+        </ul>
+        <a class="repo-link" href="https://github.com/rishendra125/meetingmeet" target="_blank" rel="noopener">View on GitHub →</a>
+      </div>
+
+      <div class="project">
+        <h3>Instagram → YouTube Song Sync</h3>
+        <p class="desc">Takes music saved on Instagram and automatically builds a matching YouTube playlist — no manual searching.</p>
+        <a class="repo-link" href="https://github.com/rishendra125/instagram_youtube_song_sync" target="_blank" rel="noopener">View on GitHub →</a>
+      </div>
+
+      <div class="project">
+        <h3>Scrum RAG Chatbot</h3>
+        <p class="desc">A chatbot that answers Scrum questions by actually reading the official Scrum.org guides first, rather than guessing.</p>
+        <ul>
+          <li>Grounded in 4 official Scrum.org guides</li>
+          <li>First project built end-to-end without a developer background</li>
+        </ul>
+        <a class="repo-link" href="https://github.com/rishendra125/scrum-rag-chatbot" target="_blank" rel="noopener">View on GitHub →</a>
+      </div>
+    </main>
+
+    <footer>
+      <p>Get in touch on <a href="https://www.linkedin.com/in/rishendra-vikram-singh-a7355718a/" target="_blank" rel="noopener">LinkedIn</a>.</p>
+    </footer>
+  </div>
+</body>
+</html>
