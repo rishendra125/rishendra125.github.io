@@ -99,6 +99,11 @@
   .stats li::before {
     content: none;
   }
+  .certs {
+    margin: 8px 0 0;
+    color: var(--muted);
+    font-size: 0.82rem;
+  }
   /* --- end tryout additions --- */
 
   h2.section-label {
@@ -181,16 +186,18 @@
       <!-- tryout: avatar block, remove <div class="header-top">...</div> wrapper (keeping the h1 inside) to revert -->
       <div class="header-top">
         <div class="avatar" aria-hidden="true">RS</div>
-        <h1>Rishendra Singh</h1>
+        <!-- tryout update: headline text swapped from "Rishendra Singh", revert to that to undo -->
+        <h1>Senior Consultant turned AI Product Builder</h1>
       </div>
-      <p class="tagline">Emerging AI Orchestrator — 7 years in program and delivery management, now applying that same discipline to building AI products.</p>
+      <!-- tryout update: tagline text swapped, revert to "Emerging AI Orchestrator — 7 years in program and delivery management, now applying that same discipline to building AI products." to undo -->
+      <p class="tagline">7 years driving program delivery, now shipping AI products solo.</p>
       <!-- tryout: badge, remove this line to revert -->
-      <span class="badge">Open to PMO Manager, Program Manager, and AI Product Manager roles.</span>
+      <span class="badge">Open to PMO Manager, Program Manager &amp; AI Product Manager roles</span>
       <!-- tryout: stat row, remove this <ul>...</ul> to revert -->
       <ul class="stats">
-        <li>5 shipped projects</li>
         <li>7 yrs program &amp; delivery management</li>
-        <li>6 months building in AI</li>
+        <li>15+ member teams managed</li>
+        <li>50% delivery velocity gain via agile enablement</li>
       </ul>
       <div class="links">
         <a href="https://www.linkedin.com/in/rishendra-vikram-singh-a7355718a/" target="_blank" rel="noopener">LinkedIn</a>
@@ -259,6 +266,8 @@
 
     <footer>
       <p>Get in touch on <a href="https://www.linkedin.com/in/rishendra-vikram-singh-a7355718a/" target="_blank" rel="noopener">LinkedIn</a>.</p>
+      <!-- tryout: certifications line, remove this line to revert -->
+      <p class="certs">PMP · PMI-ACP · A-CSM certified</p>
     </footer>
   </div>
 </body>
