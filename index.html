@@ -104,14 +104,115 @@
     color: var(--muted);
     font-size: 0.82rem;
   }
-  .positioning {
+  /* --- end tryout additions --- */
+
+  /* --- tryout: hero restructure (v2), replaces the stacked header-top/positioning/stats
+     layout above with a wider two-column hero. To revert to the previous stacked
+     version, restore index.html from commit f4c27aa (git show f4c27aa:index.html)
+     or drop this block plus the .hero-wrap/.hero markup and bring back the older
+     <header> markup that used .header-top/.positioning/.stats directly. --- */
+  .hero-wrap {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 40px 20px 0;
+  }
+  .hero {
+    display: flex;
+    align-items: center;
+    gap: 48px;
+    border-top: 1px solid var(--border);
+    padding-top: 40px;
+    margin-bottom: 40px;
+  }
+  .hero-left {
+    flex: 1 1 60%;
+    min-width: 0;
+  }
+  .hero-right {
+    flex: 0 0 auto;
+    width: 38%;
+    display: flex;
+    justify-content: center;
+  }
+  .hero .eyebrow {
     font-family: var(--heading-font);
     font-weight: 600;
-    font-size: 0.95rem;
-    color: var(--accent);
-    margin: 0 0 8px;
+    font-size: 1.1rem;
+    margin: 0 0 12px;
   }
-  /* --- end tryout additions --- */
+  .hero .badge {
+    margin: 0 0 16px;
+  }
+  .hero .headline-lg {
+    font-family: var(--heading-font);
+    font-weight: 700;
+    font-size: clamp(1.8rem, 4vw, 2.75rem);
+    line-height: 1.15;
+    margin: 0 0 16px;
+    max-width: 14ch;
+  }
+  .hero .tagline {
+    font-size: 1.05rem;
+    margin: 0 0 28px;
+  }
+  .avatar-lg {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    background: #e5e5e5;
+    color: var(--muted);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--heading-font);
+    font-weight: 600;
+    font-size: 2.2rem;
+    flex-shrink: 0;
+  }
+  .stat-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 28px;
+    margin: 0 0 24px;
+    padding: 0;
+    list-style: none;
+  }
+  .stat-grid li {
+    min-width: 120px;
+  }
+  .stat-grid .stat-value {
+    display: block;
+    font-family: var(--heading-font);
+    font-weight: 700;
+    font-size: 1.6rem;
+    color: var(--accent);
+    line-height: 1.1;
+  }
+  .stat-grid .stat-label {
+    display: block;
+    color: var(--muted);
+    font-size: 0.82rem;
+    margin-top: 4px;
+  }
+  @media (max-width: 640px) {
+    .hero {
+      flex-direction: column-reverse;
+      align-items: flex-start;
+      gap: 24px;
+    }
+    .hero-right {
+      width: auto;
+    }
+    .avatar-lg {
+      width: 110px;
+      height: 110px;
+      font-size: 1.6rem;
+    }
+    .hero .headline-lg {
+      max-width: none;
+    }
+  }
+  /* --- end hero restructure (v2) --- */
 
   h2.section-label {
     font-family: var(--heading-font);
@@ -188,30 +289,32 @@
 </style>
 </head>
 <body>
-  <div class="wrap">
-    <header>
-      <!-- tryout: avatar block, remove <div class="header-top">...</div> wrapper (keeping the h1 inside) to revert -->
-      <div class="header-top">
-        <div class="avatar" aria-hidden="true">RS</div>
-        <h1>Rishendra Singh</h1>
+  <!-- tryout v2: hero now lives in its own wider .hero-wrap (960px) instead of the
+       640px .wrap used by the projects list below. Revert instructions above the
+       CSS block that defines .hero-wrap/.hero. -->
+  <div class="hero-wrap">
+    <header class="hero">
+      <div class="hero-left">
+        <h1 class="eyebrow">Rishendra Singh</h1>
+        <span class="badge">Open to PMO Manager, Program Manager &amp; AI Product Manager roles</span>
+        <p class="headline-lg">Senior Consultant turned AI Product Builder</p>
+        <p class="tagline">7 years driving program delivery, now shipping AI products solo.</p>
+        <ul class="stat-grid">
+          <li><span class="stat-value">7 yrs</span><span class="stat-label">program &amp; delivery management</span></li>
+          <li><span class="stat-value">15+</span><span class="stat-label">team members managed</span></li>
+          <li><span class="stat-value">50%</span><span class="stat-label">delivery velocity gain</span></li>
+        </ul>
+        <div class="links">
+          <a href="https://www.linkedin.com/in/rishendra-vikram-singh-a7355718a/" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
       </div>
-      <!-- tryout: positioning line, remove this line to revert -->
-      <p class="positioning">Senior Consultant turned AI Product Builder</p>
-      <!-- tryout update: tagline text swapped, revert to "Emerging AI Orchestrator — 7 years in program and delivery management, now applying that same discipline to building AI products." to undo -->
-      <p class="tagline">7 years driving program delivery, now shipping AI products solo.</p>
-      <!-- tryout: badge, remove this line to revert -->
-      <span class="badge">Open to PMO Manager, Program Manager &amp; AI Product Manager roles</span>
-      <!-- tryout: stat row, remove this <ul>...</ul> to revert -->
-      <ul class="stats">
-        <li>7 yrs program &amp; delivery management</li>
-        <li>15+ member teams managed</li>
-        <li>50% delivery velocity gain via agile enablement</li>
-      </ul>
-      <div class="links">
-        <a href="https://www.linkedin.com/in/rishendra-vikram-singh-a7355718a/" target="_blank" rel="noopener">LinkedIn</a>
+      <div class="hero-right">
+        <div class="avatar-lg" aria-hidden="true">RS</div>
       </div>
     </header>
+  </div>
 
+  <div class="wrap">
     <main>
       <h2 class="section-label">Projects</h2>
 
