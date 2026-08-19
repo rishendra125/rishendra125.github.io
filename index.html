@@ -55,6 +55,52 @@
   .links a:hover {
     opacity: 0.7;
   }
+
+  /* --- tryout additions: remove this block + related markup to revert --- */
+  .header-top {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 16px;
+  }
+  .avatar {
+    flex-shrink: 0;
+    width: 88px;
+    height: 88px;
+    border-radius: 50%;
+    background: #e5e5e5;
+    color: var(--muted);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--heading-font);
+    font-weight: 600;
+    font-size: 1.4rem;
+  }
+  .badge {
+    display: inline-block;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    padding: 4px 12px;
+    font-size: 0.8rem;
+    color: var(--muted);
+    margin: 0 0 16px;
+  }
+  .stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 16px;
+    color: var(--muted);
+    font-size: 0.85rem;
+    margin: 0 0 16px;
+    padding: 0;
+    list-style: none;
+  }
+  .stats li::before {
+    content: none;
+  }
+  /* --- end tryout additions --- */
+
   h2.section-label {
     font-family: var(--heading-font);
     font-size: 0.8rem;
@@ -132,8 +178,20 @@
 <body>
   <div class="wrap">
     <header>
-      <h1>Rishendra Singh</h1>
+      <!-- tryout: avatar block, remove <div class="header-top">...</div> wrapper (keeping the h1 inside) to revert -->
+      <div class="header-top">
+        <div class="avatar" aria-hidden="true">RS</div>
+        <h1>Rishendra Singh</h1>
+      </div>
       <p class="tagline">Emerging AI Orchestrator — 7 years in program and delivery management, now applying that same discipline to building AI products.</p>
+      <!-- tryout: badge, remove this line to revert -->
+      <span class="badge">Open to PMO Manager, Program Manager, and AI Product Manager roles.</span>
+      <!-- tryout: stat row, remove this <ul>...</ul> to revert -->
+      <ul class="stats">
+        <li>5 shipped projects</li>
+        <li>7 yrs program &amp; delivery management</li>
+        <li>6 months building in AI</li>
+      </ul>
       <div class="links">
         <a href="https://www.linkedin.com/in/rishendra-vikram-singh-a7355718a/" target="_blank" rel="noopener">LinkedIn</a>
       </div>
