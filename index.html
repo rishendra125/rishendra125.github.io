@@ -30,6 +30,18 @@
     margin: 0 auto;
     padding: 20px 20px 80px;
   }
+  /* tryout fix: shared outer container so .hero-wrap (960px) and .wrap (640px)
+     start at the same left edge instead of each centering independently. */
+  .page {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  .page .wrap {
+    max-width: 640px;
+    margin: 0;
+    padding: 20px 0 80px;
+  }
   header {
     margin-bottom: 40px;
     border-top: 1px solid var(--border);
@@ -112,9 +124,7 @@
      or drop this block plus the .hero-wrap/.hero markup and bring back the older
      <header> markup that used .header-top/.positioning/.stats directly. --- */
   .hero-wrap {
-    max-width: 960px;
-    margin: 0 auto;
-    padding: 40px 20px 0;
+    padding: 40px 0 0;
   }
   .hero {
     display: flex;
@@ -292,6 +302,10 @@
   <!-- tryout v2: hero now lives in its own wider .hero-wrap (960px) instead of the
        640px .wrap used by the projects list below. Revert instructions above the
        CSS block that defines .hero-wrap/.hero. -->
+  <!-- tryout fix: .page is the shared outer container (960px, centered) so hero
+     and project-list content share the same left edge; .wrap no longer centers
+     on its own inside .page. -->
+  <div class="page">
   <div class="hero-wrap">
     <header class="hero">
       <div class="hero-left">
@@ -380,6 +394,7 @@
     <footer>
       <p>Get in touch on <a href="https://www.linkedin.com/in/rishendra-vikram-singh-a7355718a/" target="_blank" rel="noopener">LinkedIn</a>.</p>
     </footer>
+  </div>
   </div>
 </body>
 </html>
