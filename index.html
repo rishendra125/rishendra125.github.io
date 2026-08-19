@@ -4,12 +4,17 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Rishendra Singh — AI Projects</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 <style>
   :root {
     --text: #111;
     --muted: #555;
     --border: #ddd;
     --bg: #fff;
+    --accent: #1d3557;
+    --heading-font: "Space Grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   }
   * { box-sizing: border-box; }
   body {
@@ -23,12 +28,16 @@
   .wrap {
     max-width: 640px;
     margin: 0 auto;
-    padding: 48px 20px 80px;
+    padding: 20px 20px 80px;
   }
   header {
     margin-bottom: 40px;
+    border-top: 1px solid var(--border);
+    padding-top: 40px;
   }
   h1 {
+    font-family: var(--heading-font);
+    font-weight: 600;
     font-size: 1.5rem;
     margin: 0 0 8px;
   }
@@ -38,28 +47,51 @@
     margin: 0 0 16px;
   }
   .links a {
-    color: var(--text);
+    color: var(--accent);
     text-decoration: underline;
     font-size: 0.95rem;
+    transition: color 0.18s ease, opacity 0.18s ease;
+  }
+  .links a:hover {
+    opacity: 0.7;
   }
   h2.section-label {
+    font-family: var(--heading-font);
     font-size: 0.8rem;
     text-transform: uppercase;
     letter-spacing: 0.05em;
-    color: var(--muted);
+    color: var(--accent);
     margin: 0 0 20px;
     font-weight: 600;
   }
   .project {
+    position: relative;
     border-top: 1px solid var(--border);
     padding: 24px 0;
   }
   .project:last-child {
     border-bottom: 1px solid var(--border);
   }
+  .project .index {
+    font-family: var(--heading-font);
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--text);
+    opacity: 0.12;
+    line-height: 1;
+    margin: 0 0 6px;
+  }
   .project h3 {
+    font-family: var(--heading-font);
+    font-weight: 600;
     margin: 0 0 8px;
     font-size: 1.1rem;
+  }
+  .project .tech {
+    margin: 0 0 12px;
+    color: var(--muted);
+    font-size: 0.82rem;
+    letter-spacing: 0.01em;
   }
   .project p.desc {
     margin: 0 0 12px;
@@ -76,9 +108,13 @@
   }
   .project a.repo-link {
     display: inline-block;
-    color: var(--text);
+    color: var(--accent);
     text-decoration: underline;
     font-size: 0.95rem;
+    transition: color 0.18s ease, opacity 0.18s ease;
+  }
+  .project a.repo-link:hover {
+    opacity: 0.7;
   }
   footer {
     margin-top: 48px;
@@ -88,7 +124,11 @@
     font-size: 0.9rem;
   }
   footer a {
-    color: var(--text);
+    color: var(--accent);
+    transition: color 0.18s ease, opacity 0.18s ease;
+  }
+  footer a:hover {
+    opacity: 0.7;
   }
 </style>
 </head>
@@ -106,7 +146,9 @@
       <h2 class="section-label">Projects</h2>
 
       <div class="project">
+        <p class="index">01</p>
         <h3>QueryGPT MVP</h3>
+        <p class="tech">Python · FastAPI · SQLite · Anthropic API</p>
         <p class="desc">Lets you ask a database a plain-English question and get the right answer back — no SQL knowledge needed. Inspired by how Uber built a similar internal tool.</p>
         <ul>
           <li>Caught 4 real bugs through live, unscripted testing</li>
@@ -116,7 +158,9 @@
       </div>
 
       <div class="project">
+        <p class="index">02</p>
         <h3>Spec Audit Tool</h3>
+        <p class="tech">Node.js · Vanilla JS · Anthropic API</p>
         <p class="desc">Reviews a product spec before it gets built and flags what's missing — edge cases nobody thought of, requirements that can't be tested, numbers with no source behind them.</p>
         <ul>
           <li>Runs 18 separate checks against a spec</li>
@@ -126,7 +170,9 @@
       </div>
 
       <div class="project">
+        <p class="index">03</p>
         <h3>MeetingMeet</h3>
+        <p class="tech">Python · http.server · Anthropic API</p>
         <p class="desc">Takes a meeting transcript, figures out the action items, decides what's safe to share vs. what should stay private, and drafts emails using only the safe parts.</p>
         <ul>
           <li>Tested against 12 real meeting transcripts with hand-checked answers</li>
@@ -136,13 +182,17 @@
       </div>
 
       <div class="project">
+        <p class="index">04</p>
         <h3>Instagram → YouTube Song Sync</h3>
+        <p class="tech">Python · SQLite · YouTube API</p>
         <p class="desc">Takes music saved on Instagram and automatically builds a matching YouTube playlist — no manual searching.</p>
         <a class="repo-link" href="https://github.com/rishendra125/instagram_youtube_song_sync" target="_blank" rel="noopener">View on GitHub →</a>
       </div>
 
       <div class="project">
+        <p class="index">05</p>
         <h3>Scrum RAG Chatbot</h3>
+        <p class="tech">Python · FastAPI · Anthropic API</p>
         <p class="desc">A chatbot that answers Scrum questions by actually reading the official Scrum.org guides first, rather than guessing.</p>
         <ul>
           <li>Grounded in 4 official Scrum.org guides</li>
