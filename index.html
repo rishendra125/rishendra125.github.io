@@ -233,6 +233,10 @@
     margin: 0 0 20px;
     font-weight: 600;
   }
+  /* spacing for section-label dividers inserted between project groups */
+  .project + h2.section-label {
+    margin-top: 40px;
+  }
   .project {
     position: relative;
     border-top: 1px solid var(--border);
@@ -331,7 +335,7 @@
 
   <div class="wrap">
     <main>
-      <h2 class="section-label">Projects</h2>
+      <h2 class="section-label">AI Tools</h2>
 
       <div class="project">
         <p class="index">01</p>
@@ -401,6 +405,8 @@
         <a class="repo-link" href="https://github.com/rishendra125/agent_incident_audit_paper_mvp" target="_blank" rel="noopener">View on GitHub →</a>
       </div>
 
+      <h2 class="section-label">PMO / Business Tools</h2>
+
       <div class="project">
         <p class="index">07</p>
         <h3>VendorPulse</h3>
@@ -445,6 +451,8 @@
         <a class="repo-link" href="https://rishendra125.github.io/storystack_project/" target="_blank" rel="noopener">Read case study →</a> &nbsp;·&nbsp; <a class="repo-link" href="https://github.com/rishendra125/storystack_project" target="_blank" rel="noopener">View on GitHub →</a>
       </div>
 
+      <h2 class="section-label">AI Product Management Tools</h2>
+
       <div class="project">
         <p class="index">11</p>
         <h3>FraudLens</h3>
@@ -468,6 +476,32 @@
           <li>Style calibrated on 7 real PM problem samples — named entities, binary framing, plain English throughout</li>
         </ul>
         <a class="repo-link" href="https://rishendra125.github.io/probeLens_project/" target="_blank" rel="noopener">Live tool →</a> &nbsp;·&nbsp; <a class="repo-link" href="https://github.com/rishendra125/probeLens_project" target="_blank" rel="noopener">View on GitHub →</a>
+      </div>
+
+      <h2 class="section-label">Scrum / Agile Tools</h2>
+
+      <div class="project">
+        <p class="index">13</p>
+        <h3>RetroLoop</h3>
+        <p class="tech">Python · Claude API · Scrum</p>
+        <p class="desc">Spots when a complaint raised in a sprint retro is actually the same unresolved issue from a previous retro, just worded differently — so teams stop rediscovering problems they never actually fixed.</p>
+        <ul>
+          <li>Teams stop wasting retro time on issues that were already raised before but never properly closed</li>
+          <li>Makes retro patterns visible across sprints, not just within the one you're currently running</li>
+        </ul>
+        <a class="repo-link" href="https://github.com/rishendra125/RetroLoop_project" target="_blank" rel="noopener">View on GitHub →</a>
+      </div>
+
+      <div class="project">
+        <p class="index">14</p>
+        <h3>Kanban Board Build</h3>
+        <p class="tech">HTML · Claude API · Concurrency Testing</p>
+        <p class="desc">An investigation into what actually happens when two AI agents try to update the same Kanban board at the same time — one responding to chat, one running on a schedule. Real collision tests, documented findings.</p>
+        <ul>
+          <li>Helps teams understand the real risk of letting two AI agents write to the same data source without coordination</li>
+          <li>Built as a reference case — so you know where the guardrails actually are before deploying multi-agent workflows</li>
+        </ul>
+        <a class="repo-link" href="https://github.com/rishendra125/kanban_board_build" target="_blank" rel="noopener">View on GitHub →</a>
       </div>
     </main>
 
